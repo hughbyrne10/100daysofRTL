@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// simple up counter 
+// simple up counter
 //////////////////////////////////////////////////////////////////////////////////
 
 module day005_counter#(parameter width = 4)(
@@ -9,7 +9,7 @@ module day005_counter#(parameter width = 4)(
     output logic [width-1:0] cnt_o
 );
 
-always_ff@(posedge clk_i or negedge n_rst_i)
+always_ff@(posedge clk_i, negedge n_rst_i)
     begin
         if(~n_rst_i)
             begin 
